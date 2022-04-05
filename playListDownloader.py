@@ -6,10 +6,14 @@ p = Playlist(
     'https://www.youtube.com/playlist?list=PLTuxjD1pItJXiUZi2GnvKEBoDAx7DYwEP')
 urlList = []
 print(f'Downloading: {p.title}')
+
+# set video_urls arry size to download the number of videos in playlist
 for url in p.video_urls[:32]:
     urlList.append(url)
 
+# unComment the following line to skip downloaded videos in the array
 #del urlList[0:13]
+
 for url in urlList:
     try:
 
